@@ -1,27 +1,4 @@
-const net = require("net");
-
-// establishes a connection with the game server
-const connect = function () {
-  
-  const conn = net.createConnection({
-    host: "localhost",               
-    port:"50541" // PORT number here,
-  });
-
-  // interpret incoming data as text
-  conn.setEncoding("utf8");
-  
-  conn.on("data", (data) => {
-    // code that does something when the connection is first established
-    console.log(data);
-    //console.log("Ekin has connected");
-  });
-  // conn.on('connect', () => {
-  //   conn.write('Hello from client!');
-  // });
-
-  return conn;
-};
+const {connect} = require("./client");
 
 console.log("Connecting ...");
 
