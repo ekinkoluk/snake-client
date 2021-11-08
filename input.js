@@ -26,6 +26,9 @@ const handleUserInput = function (key) {
   if(key === 'd') {
     connection.write("Move: right");
   }
+  if(key === 'c'){
+    connection.write("Say: Ekin is the best");
+  }
 };
 
 
